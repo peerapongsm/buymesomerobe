@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/buymesomerobe/static/css/main.38be36b0.css",
-    "main.js": "/buymesomerobe/static/js/main.d48302f9.js",
+    "main.js": "/buymesomerobe/static/js/main.b8ebcafd.js",
     "static/js/787.aa67ca85.chunk.js": "/buymesomerobe/static/js/787.aa67ca85.chunk.js",
     "index.html": "/buymesomerobe/index.html",
     "main.38be36b0.css.map": "/buymesomerobe/static/css/main.38be36b0.css.map",
-    "main.d48302f9.js.map": "/buymesomerobe/static/js/main.d48302f9.js.map",
+    "main.b8ebcafd.js.map": "/buymesomerobe/static/js/main.b8ebcafd.js.map",
     "787.aa67ca85.chunk.js.map": "/buymesomerobe/static/js/787.aa67ca85.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38be36b0.css",
-    "static/js/main.d48302f9.js"
+    "static/js/main.b8ebcafd.js"
   ]
 }
