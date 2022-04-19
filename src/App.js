@@ -15,67 +15,6 @@ function App() {
   if (display) {
     return (
       <div>
-        <Container>
-          <Row>
-            <Col md={{ span: 6, offset: 3 }}>
-              <Form.Label style={{"margin-top": "30px"}}
-              htmlFor="qty"><b>How many robes do you want to buy?</b></Form.Label>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={{ span: 6, offset: 3 }}>
-              <Form.Control onChange={(e) => setCount(e.target.value) }
-              min="1" style={{width: "43%", "margin-top": "5px"}} id="input" type="number" aria-describedby="robes qty"/>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={{ span: 6, offset: 3 }}>
-              <Button
-              onClick={ () => {
-                        var dice = new Roll()
-                        var patches = 0
-                        var robes = state
-                        for (let i = 0; i < count; i++) {
-                          patches += dice.roll('4d4').result
-                        }
-
-                        for (let i = 0; i < patches; i++) {
-                          var d100 = dice.roll("d100")
-                          if (d100.result < 9) {
-                            robes[0]++
-                          } else if (d100.result < 16) {
-                            robes[1]++
-                          } else if (d100.result < 23) {
-                            robes[2]++
-                          } else if (d100.result < 31) {
-                            robes[3]++
-                          } else if (d100.result < 45) {
-                            robes[4]++
-                          } else if (d100.result < 52) {
-                            robes[5]++
-                          } else if (d100.result < 60) {
-                            robes[6]++
-                          } else if (d100.result < 69) {
-                            robes[7]++
-                          } else if (d100.result < 76) {
-                            robes[8]++
-                          } else if (d100.result < 84) {
-                            robes[9]++
-                          } else if (d100.result < 91) {
-                            robes[10]++
-                          } else if (d100.result < 97) {
-                            robes[11]++
-                          } else {
-                            robes[12]++
-                          }
-                        }
-                        setState(robes)
-                      }
-                    }
-              style={{width: "43%", "margin-top": "5px"}} id="button" variant="primary">Roll</Button>
-            </Col>
-          </Row>
-        </Container>
         <Table striped bordered hover style={{width: "90%", margin: "5%"}}>
           <thead>
             <tr>
@@ -191,7 +130,7 @@ function App() {
                       setDisplay(!display)
                       var dice = new Roll()
                       var patches = 0
-                      var robes = state
+                      var robes = Array(13).fill(0)
                       for (let i = 0; i < count; i++) {
                         patches += dice.roll('4d4').result
                       }
@@ -226,6 +165,7 @@ function App() {
                           robes[12]++
                         }
                       }
+                      setState(robes)
                     }
                   }
             style={{width: "43%"}} id="button" variant="primary">Roll</Button>
